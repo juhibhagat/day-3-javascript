@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function DeleteClick(){
+            result = confirm("Record will  be deleted\nAre you sure ?");
+            if(result==true){
+                document.querySelector("p").textcontent ="Record deleted successfully";
+                document.getElementById("msg").innerText ="deleted";
+            }
+            else{
+                alert("Deted canceled..");
+            }
+        }
+    </script>
+
+    <style>
+        #msg {
+            position: fixed;
+            top: 50px;
+            right: 20px;
+            border-radius: 100%;
+            border: 1px solid red;
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="DeleteClick()">Delete</button>
+    <p></p>
+    <div id="msg">delete</div>
+</body>
+</html>
